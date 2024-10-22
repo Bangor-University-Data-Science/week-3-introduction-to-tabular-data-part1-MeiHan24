@@ -13,8 +13,8 @@ def create_summary_table(df):
     
     sum_dict = {'Feature Name': df.columns.to_list(), 
             'Data Type': df.dtypes,
-            'Has Missing Values?': df.nunique(),
-            'Number of Unique Values': df.isnull()
+            'Has Missing Values?': df.isna(),
+            'Number of Unique Values': df.nunique()
             }
     
     return pd.DataFrame(sum_dict)
