@@ -1,6 +1,7 @@
 import pandas as pd
 
 def create_summary_table(df):
+
     """
     Creates a summary DataFrame with feature name, data type, number of unique values, and if it has missing values.
     
@@ -11,10 +12,15 @@ def create_summary_table(df):
         pd.DataFrame: A summary DataFrame.
     """
     
+
+
+
+
     sum_dict = {'Feature Name': df.columns.to_list(), 
-            'Data Type': df.dtypes,
-            'Has Missing Values?': df.isna(),
-            'Number of Unique Values': df.nunique()
+            'Data Type': df.dtypes.values,
+            'Has Missing Values?': df.isna().sum().values,
+            'Number of Unique Values': df.nunique().values
             }
-    
-    return pd.DataFrame(sum_dict)
+
+    sum_df = pd.DataFrame(sum_dict)
+    return sum_df
