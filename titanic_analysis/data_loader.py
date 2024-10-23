@@ -13,12 +13,15 @@ def load_titanic_data(filepath: str) -> pd.DataFrame:
         pd.DataFrame: Loaded Titanic dataset as a DataFrame.
     """
 
-    df = pd.read_csv(filepath)
-    if df:
-        return df
-    else: 
-        return pd.DataFrame() #empty data set
-    
+
+    return pd.read_csv(filepath)
+
+    # df = pd.read_csv(filepath)
+    # if df:
+    #     return df
+    # else: 
+    #     return pd.DataFrame() #empty data set
+   
     
 
 #df = pd.read_csv('../data/titanic.csv')
