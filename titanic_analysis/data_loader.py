@@ -25,8 +25,6 @@ def load_titanic_data(filepath: str) -> pd.DataFrame:
     
 
 # df = pd.read_csv('../data/titanic.csv')
-
-
 # print(df.head())
 # print(df.shape)
 # print(len(df))
